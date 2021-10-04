@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
       .watchQuery({
         query: gql`
           {
-            characters(page: 5, filter: { species: "Alien" }) {
+            characters(page: 1, filter: { species: "Alien" }) {
               results {
                 name
               }
