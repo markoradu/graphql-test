@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
 
   constructor(private apollo: Apollo) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.apollo
       .watchQuery({
         query: gql`
@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
       });
   }
 
-  change(event: PageEvent) {
+  change(event: PageEvent): void {
     this.apollo
       .watchQuery({
         query: gql`
