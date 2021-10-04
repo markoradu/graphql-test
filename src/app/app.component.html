@@ -1,5 +1,13 @@
-<ul>
-  <li *ngFor="let character of characters">
-    {{ character.name }}
-  </li>
-</ul>
+<h1>Rick and Morty characters:</h1>
+<mat-list role="list">
+  <mat-list-item role="listitem" *ngFor="let character of characters">{{
+    character.name
+  }}</mat-list-item>
+  <mat-paginator
+    [length]="length"
+    [pageSize]="pageSize"
+    (page)="change($event)"
+    aria-label="Select page"
+  >
+  </mat-paginator>
+</mat-list>
